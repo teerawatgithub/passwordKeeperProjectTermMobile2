@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.example.passwordkeeper.databinding.FragmentLoginBinding
+import com.example.passwordkeeper.databinding.FragmentVaultBinding
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,13 +23,14 @@ private const val ARG_PARAM2 = "param2"
  */
 class VaultFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vault, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
+        val binding = DataBindingUtil.inflate<FragmentVaultBinding>(inflater,
+            R.layout.fragment_vault,container,false)
+        binding.securityButton.setOnClickListener{
+                view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_securityFragment)
+        }
+        return binding.root
     }
-
 
 }

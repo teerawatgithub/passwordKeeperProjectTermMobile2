@@ -9,5 +9,9 @@
         <action android:id="@+id/action_loginFragment_to_vaultFragment" app:destination="@id/vaultFragment"/>
     </fragment>
     <fragment android:id="@+id/vaultFragment" android:name="com.example.passwordkeeper.VaultFragment"
-              android:label="fragment_vault" tools:layout="@layout/fragment_vault"/>
+              android:label="fragment_vault" tools:layout="@layout/fragment_vault">
+        <action android:id="@+id/action_vaultFragment_to_securityFragment" app:destination="@+id/securityFragment"/>
+    </fragment>
+    <fragment android:id="@+id/securityFragment" android:name="com.example.passwordkeeper.SecurityFragment"
+              android:label="fragment_security" tools:layout="@layout/fragment_security"/>
 </navigation>
