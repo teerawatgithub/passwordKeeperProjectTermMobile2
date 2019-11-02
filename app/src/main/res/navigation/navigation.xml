@@ -8,10 +8,36 @@
               android:label="fragment_login" tools:layout="@layout/fragment_login">
         <action android:id="@+id/action_loginFragment_to_vaultFragment" app:destination="@id/vaultFragment"/>
     </fragment>
-    <fragment android:id="@+id/vaultFragment" android:name="com.example.passwordkeeper.VaultFragment"
-              android:label="fragment_vault" tools:layout="@layout/fragment_vault">
-        <action android:id="@+id/action_vaultFragment_to_securityFragment" app:destination="@+id/securityFragment"/>
+    <fragment
+            android:id="@+id/vaultFragment"
+            android:name="com.example.passwordkeeper.VaultFragment"
+            android:label="fragment_vault"
+            tools:layout="@layout/fragment_vault">
+        <action
+                android:id="@+id/action_vaultFragment_to_securityFragment"
+                app:destination="@+id/securityFragment" />
+        <action
+                android:id="@+id/action_vaultFragment_to_settingFragment"
+                app:destination="@id/settingFragment" />
     </fragment>
     <fragment android:id="@+id/securityFragment" android:name="com.example.passwordkeeper.SecurityFragment"
-              android:label="fragment_security" tools:layout="@layout/fragment_security"/>
+              android:label="fragment_security" tools:layout="@layout/fragment_security">
+        <action
+                android:id="@+id/action_securityFragment_to_settingFragment"
+                app:destination="@id/settingFragment" />
+        <action
+                android:id="@+id/action_securityFragment_to_vaultFragment"
+                app:destination="@id/vaultFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/settingFragment"
+            android:name="com.example.passwordkeeper.SettingFragment"
+            android:label="SettingFragment" >
+        <action
+                android:id="@+id/action_settingFragment_to_securityFragment"
+                app:destination="@id/securityFragment" />
+        <action
+                android:id="@+id/action_settingFragment_to_vaultFragment"
+                app:destination="@id/vaultFragment" />
+    </fragment>
 </navigation>

@@ -30,6 +30,9 @@ class VaultFragment : Fragment() {
         binding.securityButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_securityFragment)
         }
+        binding.settingButton.setOnClickListener{
+                view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
+        }
         return binding.root
     }
 

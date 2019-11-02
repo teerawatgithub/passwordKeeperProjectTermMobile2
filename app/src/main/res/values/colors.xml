@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="backgroundButtonPasswordKeeper">#414141</color>
     <color name="backgroundButtonPasswordKeeperPickUp">#5CABFF</color>
+    <color name="backgroundTnitColor">#4c8bf5</color>
 </resources>
