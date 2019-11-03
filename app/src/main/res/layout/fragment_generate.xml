@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".GenerateFragment">
+
+    <!--<data>-->
+    <!--<variable-->
+    <!--name="seek"-->
+    <!--type="com.example.passwordkeeper.GenerateFragment.Seekbar" />-->
+    <!--</data>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_dark">
+
+        <EditText
+                android:id="@+id/generate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroundTnitColor"
+                android:ems="10" android:inputType="textPersonName" android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textColorHighlight="@android:color/holo_blue_bright"
+                android:textColorHint="@android:color/darker_gray"
+                android:textColorLink="@android:color/holo_blue_light"
+                android:textCursorDrawable="@android:color/holo_blue_light" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        <SeekBar
+                android:id="@+id/seekBar"
+                android:max="16"
+                android:progress="8"
+                android:layout_width="240dp" android:layout_height="30dp" android:layout_marginStart="50dp"
+                android:layout_marginTop="14dp" android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/generate_text"/>
+        <TextView
+                android:id="@+id/length_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp" android:text="@string/length_text"
+                android:textColor="@android:color/white" app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+                app:layout_constraintEnd_toStartOf="@+id/seekBar" app:layout_constraintTop_toTopOf="@+id/seekBar"/>
+        <TextView
+                android:id="@+id/length_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:text="wait" android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/seekBar" app:layout_constraintStart_toEndOf="@+id/seekBar"
+                app:layout_constraintTop_toTopOf="@+id/seekBar" app:layout_constraintVertical_bias="0.0"/>
+        <Button
+                android:id="@+id/generate_button"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:text="@string/generate_text" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seekBar"/>
+        <Button
+                android:id="@+id/copy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp" android:text="@string/copy_text"
+                app:layout_constraintBottom_toBottomOf="@+id/generate_button" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/generate_button"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

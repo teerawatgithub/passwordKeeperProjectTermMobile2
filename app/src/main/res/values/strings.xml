@@ -5,4 +5,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="todo">TODO</string>
     <string name="login_label">LOGIN</string>
+    <string name="generate_password_text">Generate Password</string>
+    <string name="generate_text">Generate</string>
+    <string name="length_text">Length</string>
+    <string name="copy_text">copy</string>
 </resources>

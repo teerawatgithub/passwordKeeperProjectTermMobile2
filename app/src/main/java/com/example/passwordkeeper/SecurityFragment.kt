@@ -12,15 +12,6 @@ import com.example.passwordkeeper.databinding.FragmentSecurityBinding
 import com.example.passwordkeeper.databinding.FragmentVaultBinding
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- *
- */
 class SecurityFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +23,9 @@ class SecurityFragment : Fragment() {
         }
         binding.settingButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_securityFragment_to_settingFragment)
+        }
+        binding.generateButton.setOnClickListener{
+                view : View -> view.findNavController().navigate(R.id.action_securityFragment_to_generateFragment)
         }
         return binding.root
     }

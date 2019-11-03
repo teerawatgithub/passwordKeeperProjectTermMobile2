@@ -6,4 +6,6 @@
     <color name="backgroundButtonPasswordKeeper">#414141</color>
     <color name="backgroundButtonPasswordKeeperPickUp">#5CABFF</color>
     <color name="backgroundTnitColor">#4c8bf5</color>
+    <color name="dark">#000000</color>
+    <color name="darkLight">#212121</color>
 </resources>

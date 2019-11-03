@@ -12,42 +12,50 @@
         <!-- TODO: Update blank fragment layout -->
 
 
+        <Button
+                android:id="@+id/generate_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginTop="100dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/generate_password_text"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
         <LinearLayout
-                android:orientation="horizontal"
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent">
+                android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent">
             <Button
-                    android:text="Vault"
-                    android:layout_width="140dp"
-                    android:layout_height="50dp"
                     android:id="@+id/vault_button"
-                    style="@android:style/Widget.Material.Light.Button.Borderless" tools:ignore="NewApi"
-                    android:textColor="@android:color/white" android:textColorHighlight="@android:color/darker_gray"
-                    android:textColorHint="@android:color/white" android:textCursorDrawable="@android:color/white"
-                    android:textColorLink="@android:color/white"
-                    android:background="@color/backgroundButtonPasswordKeeper"/>
-            <Button
-                    android:text="Security"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
+                    android:background="@color/backgroundButtonPasswordKeeper" android:text="Vault"
+                    android:textColor="@android:color/white" android:textColorHighlight="@android:color/darker_gray"
+                    android:textColorHint="@android:color/white" android:textColorLink="@android:color/white"
+                    android:textCursorDrawable="@android:color/white"
+                    tools:ignore="NewApi"/>
+            <Button
                     android:id="@+id/security_button"
-                    style="@android:style/Widget.Material.Light.Button.Borderless" tools:ignore="NewApi"
-                    android:textColor="@android:color/white" android:textColorHighlight="@android:color/darker_gray"
-                    android:textColorHint="@android:color/white" android:textCursorDrawable="@android:color/white"
-                    android:textColorLink="@android:color/white"
-                    android:background="@color/backgroundButtonPasswordKeeperPickUp"/>
-            <Button
-                    android:text="Setting"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
+                    android:background="@color/backgroundButtonPasswordKeeperPickUp" android:text="Security"
+                    android:textColor="@android:color/white" android:textColorHighlight="@android:color/darker_gray"
+                    android:textColorHint="@android:color/white" android:textColorLink="@android:color/white"
+                    android:textCursorDrawable="@android:color/white"
+                    tools:ignore="NewApi"/>
+            <Button
                     android:id="@+id/setting_button"
                     style="@android:style/Widget.Material.Light.Button.Borderless"
-                    tools:ignore="NewApi" android:textColor="@android:color/white"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@color/backgroundButtonPasswordKeeper"
+                    android:text="Setting" android:textColor="@android:color/white"
                     android:textColorHighlight="@android:color/darker_gray"
-                    android:textColorHint="@android:color/white" android:textCursorDrawable="@android:color/white"
-                    android:textColorLink="@android:color/white"
-                    android:background="@color/backgroundButtonPasswordKeeper"/>
+                    android:textColorHint="@android:color/white" android:textColorLink="@android:color/white"
+                    android:textCursorDrawable="@android:color/white"
+                    tools:ignore="NewApi"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
