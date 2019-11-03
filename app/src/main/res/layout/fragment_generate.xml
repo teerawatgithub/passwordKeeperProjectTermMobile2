@@ -4,11 +4,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".GenerateFragment">
 
-    <!--<data>-->
-    <!--<variable-->
-    <!--name="seek"-->
-    <!--type="com.example.passwordkeeper.GenerateFragment.Seekbar" />-->
-    <!--</data>-->
+    <data>
+    <variable
+    name="seek"
+    type="com.example.passwordkeeper.GeneratePasswordData" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -17,6 +17,7 @@
 
         <EditText
                 android:id="@+id/generate_text"
+                android:text="@{seek.passwordValue}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -52,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:layout_marginStart="8dp"
                 android:layout_marginTop="5dp"
-                android:text="wait" android:textColor="@android:color/white"
+                android:text="@{String.valueOf(seek.length)}" android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/seekBar" app:layout_constraintStart_toEndOf="@+id/seekBar"
                 app:layout_constraintTop_toTopOf="@+id/seekBar" app:layout_constraintVertical_bias="0.0"/>
         <Button
