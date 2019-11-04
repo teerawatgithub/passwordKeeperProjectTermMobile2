@@ -9,4 +9,6 @@
     <string name="generate_text">Generate</string>
     <string name="length_text">Length</string>
     <string name="copy_text">copy</string>
+    <string name="submit_label">submit_label</string>
+    <string name="submit_text">submit</string>
 </resources>
