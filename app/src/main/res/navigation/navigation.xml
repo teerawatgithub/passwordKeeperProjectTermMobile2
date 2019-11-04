@@ -19,6 +19,9 @@
         <action
                 android:id="@+id/action_vaultFragment_to_settingFragment"
                 app:destination="@id/settingFragment" />
+        <action
+                android:id="@+id/action_vaultFragment_to_addPasswordFragment"
+                app:destination="@id/addPasswordFragment" />
     </fragment>
     <fragment android:id="@+id/securityFragment" android:name="com.example.passwordkeeper.SecurityFragment"
               android:label="fragment_security" tools:layout="@layout/fragment_security">
@@ -43,4 +46,13 @@
     </fragment>
     <fragment android:id="@+id/generateFragment" android:name="com.example.passwordkeeper.GenerateFragment"
               android:label="fragment_generate" tools:layout="@layout/fragment_generate"/>
+    <fragment
+            android:id="@+id/addPasswordFragment"
+            android:name="com.example.passwordkeeper.AddPasswordFragment"
+            android:label="fragment_add_password"
+            tools:layout="@layout/fragment_add_password" >
+        <action
+                android:id="@+id/action_addPasswordFragment_to_vaultFragment"
+                app:destination="@id/vaultFragment" />
+    </fragment>
 </navigation>

@@ -2,6 +2,7 @@ package com.example.passwordkeeper
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,6 +25,9 @@ class VaultFragment : Fragment() {
         }
         binding.settingButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
+        }
+        binding.addButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_vaultFragment_to_addPasswordFragment)
         }
         return binding.root
     }
