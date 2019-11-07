@@ -2,17 +2,12 @@ package com.example.passwordkeeper
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.passwordkeeper.databinding.FragmentLoginBinding
+import com.example.passwordkeeper.data.Accout
 import com.example.passwordkeeper.databinding.FragmentVaultBinding
 
 
@@ -34,8 +29,22 @@ class VaultFragment : Fragment() {
         }
         setHasOptionsMenu(true)
         arr.clear()
-        arr.add(Accout("facebook", "teerawat1919","alskjrefa", "awlthasdfkjawei"))
-        arr.add(Accout("Line", "teerawat1919","alskjrefa", "awlthasdfkjawei"))
+        arr.add(
+            Accout(
+                "facebook",
+                "teerawat1919",
+                "alskjrefa",
+                "awlthasdfkjawei"
+            )
+        )
+        arr.add(
+            Accout(
+                "Line",
+                "teerawat1919",
+                "alskjrefa",
+                "awlthasdfkjawei"
+            )
+        )
         binding.recyclerView.adapter = CustomAdapter(arr,this)
 
 

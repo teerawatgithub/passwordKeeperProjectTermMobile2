@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.passwordkeeper.data.Accout
 
-class CustomAdapter (var accoutList: ArrayList<Accout>,var fragment: VaultFragment) : RecyclerView.Adapter<CustomAdapter.ViewHolder> () {
+class CustomAdapter (var accoutList: ArrayList<Accout>, var fragment: VaultFragment) : RecyclerView.Adapter<CustomAdapter.ViewHolder> () {
     var accoutListt = accoutList
     var fragments = fragment
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,6 +30,9 @@ class CustomAdapter (var accoutList: ArrayList<Accout>,var fragment: VaultFragme
 
         holder.textVieUsername.setOnClickListener {
             Log.i("xxxx","xxxxx")
+            findNavController(fragments).navigate(R.id.action_vaultFragment_to_addPasswordFragment)
+        }
+        holder.textViewName.setOnClickListener {
             findNavController(fragments).navigate(R.id.action_vaultFragment_to_addPasswordFragment)
         }
     }

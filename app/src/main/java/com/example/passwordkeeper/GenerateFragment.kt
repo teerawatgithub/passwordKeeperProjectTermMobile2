@@ -7,16 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+import com.example.passwordkeeper.data.GeneratePasswordData
 import com.example.passwordkeeper.databinding.FragmentGenerateBinding
-import com.example.passwordkeeper.databinding.FragmentVaultBinding
-import kotlinx.android.synthetic.main.fragment_generate.*
 
 
 class GenerateFragment : Fragment() {
-    private var passGen: GeneratePasswordData = GeneratePasswordData()
+    private var passGen: GeneratePasswordData =
+        GeneratePasswordData()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentGenerateBinding>(inflater,
