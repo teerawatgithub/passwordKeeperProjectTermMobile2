@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -26,11 +27,26 @@ class GenerateFragment : Fragment() {
             var myPassword = generateRandomPassword(binding.seekBar.progress)
             passGen.passwordValue = myPassword
             passGen.length = binding.seekBar.progress
-            binding.seek = passGen
             binding.invalidateAll()
         }
 
+        binding.seekBar?.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                // Write code to perform some action when progress is changed.
+                passGen.length = binding.seekBar.progress
+                binding.invalidateAll()
+            }
 
+            override fun onStartTrackingTouch(seekBar: SeekBar) {
+                // Write code to perform some action when touch is started.
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar) {
+            }
+
+        })
+
+        binding.seek = passGen
         return binding.root
     }
 

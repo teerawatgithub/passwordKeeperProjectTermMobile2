@@ -4,11 +4,14 @@ package com.example.passwordkeeper
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.passwordkeeper.databinding.FragmentLoginBinding
 import com.example.passwordkeeper.databinding.FragmentVaultBinding
 
@@ -30,6 +33,9 @@ class VaultFragment : Fragment() {
             view.findNavController().navigate(R.id.action_vaultFragment_to_addPasswordFragment)
         }
         setHasOptionsMenu(true)
+
+
+
         return binding.root
     }
 
