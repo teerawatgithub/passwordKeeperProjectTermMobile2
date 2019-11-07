@@ -9,8 +9,6 @@
             android:layout_height="match_parent"
             android:background="@android:color/background_dark">
 
-        <!-- TODO: Update blank fragment layout -->
-
 
         <TextView
                 android:id="@+id/add_button"
@@ -26,6 +24,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_width="match_parent"
                 android:layout_height="630dp"
                 android:layout_marginTop="45dp"

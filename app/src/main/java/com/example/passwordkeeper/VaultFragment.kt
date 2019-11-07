@@ -18,7 +18,7 @@ import com.example.passwordkeeper.databinding.FragmentVaultBinding
 
 
 class VaultFragment : Fragment() {
-
+    var arr = ArrayList<Accout>()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentVaultBinding>(inflater,
@@ -33,7 +33,10 @@ class VaultFragment : Fragment() {
             view.findNavController().navigate(R.id.action_vaultFragment_to_addPasswordFragment)
         }
         setHasOptionsMenu(true)
-
+        arr.clear()
+        arr.add(Accout("facebook", "teerawat1919","alskjrefa", "awlthasdfkjawei"))
+        arr.add(Accout("Line", "teerawat1919","alskjrefa", "awlthasdfkjawei"))
+        binding.recyclerView.adapter = CustomAdapter(arr,this)
 
 
         return binding.root
