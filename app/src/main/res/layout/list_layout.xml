@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_dark"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@android:color/background_dark">
+
+        <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_dark"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:textColor="@android:color/white" />
+
+            <TextView
+                    android:id="@+id/textVieUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="test100"
+                    android:textColor="@android:color/tertiary_text_light" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
