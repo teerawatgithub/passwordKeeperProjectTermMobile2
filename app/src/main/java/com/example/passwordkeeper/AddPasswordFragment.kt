@@ -28,8 +28,9 @@ class AddPasswordFragment : Fragment() {
         binding.submitButton.setOnClickListener { view : View ->
 //            viewModel.addAccout(binding.nameTextEdit.text.toString(), binding.usernameTextEdit.text.toString(), binding.passwordTextEdit.text.toString(), binding.noteTextEdit.text.toString())
 //            Log.i("AddpasswordFragment", " testMask1")
-
-            view.findNavController().navigate(R.id.action_addPasswordFragment_to_vaultFragment)
+            val name = binding.nameTextEdit.text.toString()
+            val username = binding.usernameTextEdit.text.toString()
+            view.findNavController().navigate(AddPasswordFragmentDirections.actionAddPasswordFragmentToVaultFragment(name, username))
         }
 
 

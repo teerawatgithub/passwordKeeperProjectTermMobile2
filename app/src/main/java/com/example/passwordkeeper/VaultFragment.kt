@@ -22,6 +22,11 @@ class VaultFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentVaultBinding>(inflater,
             R.layout.fragment_vault,container,false)
+
+        val args = VaultFragmentArgs.fromBundle(arguments!!)
+        viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
+        viewModel.addAccout(args.name, args.username, "test", "from SafeArgs")
+
         binding.securityButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_securityFragment)
         }
@@ -51,7 +56,6 @@ class VaultFragment : Fragment() {
             )
         )
 
-        viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
         viewModel.acc.observe(this, Observer {
 
             acc -> arr.add(Accout(acc.name,acc.username,acc.password,acc.note))

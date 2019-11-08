@@ -23,6 +23,14 @@
         <action
                 android:id="@+id/action_vaultFragment_to_addPasswordFragment"
                 app:destination="@id/addPasswordFragment" />
+        <argument
+                android:name="name"
+                app:argType="string"
+                android:defaultValue="N/A" />
+        <argument
+                android:name="username"
+                app:argType="string"
+                android:defaultValue="N/A" />
     </fragment>
     <fragment android:id="@+id/securityFragment" android:name="com.example.passwordkeeper.SecurityFragment"
               android:label="fragment_security" tools:layout="@layout/fragment_security">
