@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.passwordkeeper.databinding.FragmentSettingBinding
@@ -27,6 +28,7 @@ class SettingFragment : Fragment() {
         binding.securityButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_settingFragment_to_securityFragment)
         }
+
         return binding.root
     }
 

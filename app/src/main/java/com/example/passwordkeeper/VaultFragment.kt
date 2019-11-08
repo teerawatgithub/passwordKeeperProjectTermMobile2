@@ -61,7 +61,7 @@ class VaultFragment : Fragment() {
             acc -> arr.add(Accout(acc.name,acc.username,acc.password,acc.note))
             Log.i("AddpasswordFragment", "${acc.name}")
         })
-
+        Log.i("test", arr.toString())
         binding.recyclerView.adapter = CustomAdapter(arr,this)
         Log.i("AddpasswordFragment", " testMask3")
         return binding.root

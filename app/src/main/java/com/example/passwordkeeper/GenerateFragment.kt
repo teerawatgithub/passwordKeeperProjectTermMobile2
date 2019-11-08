@@ -50,7 +50,7 @@ class GenerateFragment : Fragment() {
 
 
     fun generateRandomPassword(length: Int): String {
-        val chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        val chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*+-/"
         var passWord = ""
         for (i in 1..length) {
             passWord += chars[Math.floor(Math.random() * chars.length).toInt()]

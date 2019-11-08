@@ -12,4 +12,6 @@
     <string name="submit_label">submit_label</string>
     <string name="submit_text">submit</string>
     <string name="about">About</string>
+    <string name="share_success_text">Success</string>
+    <string name="messageAbout">A password manager assists in generating and retrieving complex passwords, potentially storing such passwords in an encrypted database or calculating them on demand.</string>
 </resources>
