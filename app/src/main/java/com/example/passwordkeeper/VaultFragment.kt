@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.passwordkeeper.data.Accout
 import com.example.passwordkeeper.databinding.FragmentVaultBinding
-
+import com.example.passwordkeeper.viewModel.AccoutViewModel
 
 
 class VaultFragment : Fragment() {
     var arr = ArrayList<Accout>()
+    private lateinit var viewModel: AccoutViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentVaultBinding>(inflater,
@@ -21,8 +24,10 @@ class VaultFragment : Fragment() {
         binding.securityButton.setOnClickListener{
                 view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_securityFragment)
         }
-        binding.settingButton.setOnClickListener{
-                view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
+        binding.settingButton.setOnClickListener{ view : View ->
+//            view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
+            viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
+            viewModel.acc.observe(this, Observer { arr })
         }
         binding.addButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_vaultFragment_to_addPasswordFragment)
