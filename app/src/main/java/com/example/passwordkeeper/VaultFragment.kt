@@ -2,6 +2,7 @@ package com.example.passwordkeeper
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
@@ -25,9 +26,8 @@ class VaultFragment : Fragment() {
                 view : View -> view.findNavController().navigate(R.id.action_vaultFragment_to_securityFragment)
         }
         binding.settingButton.setOnClickListener{ view : View ->
-//            view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
-            viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
-            viewModel.acc.observe(this, Observer { arr })
+            view.findNavController().navigate(R.id.action_vaultFragment_to_settingFragment)
+
         }
         binding.addButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_vaultFragment_to_addPasswordFragment)
@@ -50,9 +50,16 @@ class VaultFragment : Fragment() {
                 "awlthasdfkjawei"
             )
         )
+
+        viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
+        viewModel.acc.observe(this, Observer {
+
+            acc -> arr.add(Accout(acc.name,acc.username,acc.password,acc.note))
+            Log.i("AddpasswordFragment", "${acc.name}")
+        })
+
         binding.recyclerView.adapter = CustomAdapter(arr,this)
-
-
+        Log.i("AddpasswordFragment", " testMask3")
         return binding.root
     }
 

@@ -19,15 +19,16 @@ import kotlinx.android.synthetic.main.fragment_add_password.*
  * A simple [Fragment] subclass.
  */
 class AddPasswordFragment : Fragment() {
-    private lateinit var viewModel: AccoutViewModel
+//    private lateinit var viewModel: AccoutViewModel
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentAddPasswordBinding>(inflater,
             R.layout.fragment_add_password,container,false)
-        viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
+//        viewModel = ViewModelProviders.of(this).get(AccoutViewModel::class.java)
         binding.submitButton.setOnClickListener { view : View ->
-            viewModel.addAccout(binding.nameTextEdit.text.toString(), binding.usernameTextEdit.text.toString(), binding.passwordTextEdit.text.toString(), binding.noteTextEdit.text.toString())
-            Log.i("AddpasswordFragment", "Called ViewModelProviders.of")
+//            viewModel.addAccout(binding.nameTextEdit.text.toString(), binding.usernameTextEdit.text.toString(), binding.passwordTextEdit.text.toString(), binding.noteTextEdit.text.toString())
+//            Log.i("AddpasswordFragment", " testMask1")
+
             view.findNavController().navigate(R.id.action_addPasswordFragment_to_vaultFragment)
         }
 
