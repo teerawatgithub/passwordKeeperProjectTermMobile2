@@ -24,14 +24,14 @@
                     android:id="@+id/textViewName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Facebook"
+                    android:text="@string/facebook"
                     android:textColor="@android:color/white" />
 
             <TextView
                     android:id="@+id/textVieUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="test100"
+                    android:text="@string/test100"
                     android:textColor="@android:color/tertiary_text_light" />
 
         </LinearLayout>

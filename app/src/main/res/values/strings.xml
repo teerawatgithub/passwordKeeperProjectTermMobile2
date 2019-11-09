@@ -14,4 +14,16 @@
     <string name="about">About</string>
     <string name="share_success_text">Success</string>
     <string name="messageAbout">A password manager assists in generating and retrieving complex passwords, potentially storing such passwords in an encrypted database or calculating them on demand.</string>
+    <string name="name">name</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="note">note</string>
+    <string name="password_keeper">Password Keeper</string>
+    <string name="master_password">master password</string>
+    <string name="username">username</string>
+    <string name="vault">Vault</string>
+    <string name="security">Security</string>
+    <string name="setting">Setting</string>
+    <string name="facebook">Facebook</string>
+    <string name="test100">test100</string>
 </resources>

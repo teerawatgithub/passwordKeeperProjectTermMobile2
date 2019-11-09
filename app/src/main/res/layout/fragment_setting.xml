@@ -18,7 +18,7 @@
                 android:layout_height="50dp"
                 app:layout_constraintBottom_toBottomOf="parent">
             <Button
-                    android:text="Vault"
+                    android:text="@string/vault"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:id="@+id/vault_button"
@@ -28,7 +28,7 @@
                     android:textColorLink="@android:color/white"
                     android:background="@color/backgroundButtonPasswordKeeper"/>
             <Button
-                    android:text="Security"
+                    android:text="@string/security"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:id="@+id/security_button"
@@ -38,7 +38,7 @@
                     android:textColorLink="@android:color/white"
                     android:background="@color/backgroundButtonPasswordKeeper"/>
             <Button
-                    android:text="Setting"
+                    android:text="@string/setting"
                     android:layout_width="140dp"
                     android:layout_height="50dp"
                     android:id="@+id/setting_button"

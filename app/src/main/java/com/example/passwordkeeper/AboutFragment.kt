@@ -24,7 +24,7 @@ class AboutFragment : Fragment() {
 
         setHasOptionsMenu(true)
         val myWebView: WebView = binding.loadWeb
-        myWebView.loadUrl("https://tender-ride-429052.netlify.com/")
+        myWebView.loadUrl("https://tender-ride-429052.netlify.com")
         return binding.root
     }
 
